@@ -3,178 +3,363 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lifetime Roofing | Premium Roofing, Repair & Inspections</title>
-    <meta name="description" content="Get professional, same-day roofing services, roof repair, and detailed inspections from Lifetime Roofing. Trusted local experts offering financing options.">
-    <!-- Google Fonts: Syne & Plus Jakarta Sans -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <title>Lifetime Roofing | Premium Roofing & Lifetime Protection</title>
     <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- HIGH-PERFORMANCE STYLE OVERRIDES (Fixes Blur & Layout Stretching) -->
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(26, 11, 56, 0.85), rgba(26, 11, 56, 0.85)), 
+                        url('Gemini_Generated_Image_xqv4j4xqv4j4xqv4.png') no-repeat center center/cover !important;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+        }
+        .gallery-img-wrapper {
+            width: 100%;
+            height: 250px; /* Locks down a stable container height */
+            overflow: hidden;
+            background: #1a0b38;
+        }
+        .gallery-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Prevents stretching and distortion */
+            object-position: center;
+            transition: transform 0.3s ease;
+        }
+        .main-team-img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Top Announcement Bar -->
-    <div class="announcement-bar">
-        <p>⚡ Same-Day Service Available! Call Now: <strong>(225) 527-7663</strong></p>
+    <!-- UTILITY TOP HEADER -->
+    <div class="utility-bar">
+        <div class="utility-container">
+            <div class="promo-text">
+                <i class="fa-solid fa-bolt animate-flash"></i> Same-Day Service Available! Call Now: <strong>(222) 527-7663</strong>
+            </div>
+            <div class="utility-actions">
+                <a href="#estimate" class="util-btn"><i class="fa-solid fa-wallet"></i> Easy Financing</a>
+                <a href="#reviews" class="util-btn"><i class="fa-solid fa-star"></i> Read Our Reviews</a>
+                <a href="#locations" class="util-btn region-btn">Houston <i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+        </div>
     </div>
 
-    <!-- Header & Navigation -->
+    <!-- MAIN NAV HEADER -->
     <header class="main-header">
-        <div class="container nav-container">
+        <div class="header-container">
             <a href="#" class="logo-area">
-                <!-- SVG Vectorized Representation of Logo from Screenshot_20260629-220521.png -->
-                <svg width="45" height="45" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="50" cy="50" r="48" stroke="#311A5E" stroke-width="4"/>
-                    <path d="M25 60L50 35L75 60" stroke="#F4B324" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M35 65L50 50L65 65" stroke="#311A5E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M40 80H60" stroke="#311A5E" stroke-width="3" stroke-linecap="round"/>
-                </svg>
+                <div class="logo-circle">
+                    <i class="fa-solid fa-house-chimney"></i>
+                </div>
                 <div class="logo-text">
-                    <span class="brand-title">LIFETIME</span>
-                    <span class="brand-sub">ROOFING</span>
+                    <span class="brand-top">LIFETIME</span>
+                    <span class="brand-bottom">ROOFING</span>
                 </div>
             </a>
-            
-            <nav class="desktop-nav">
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#why-us" class="nav-link">Why Choose Us</a>
-                <a href="#inspections" class="nav-link">Inspections</a>
-                <a href="#locations" class="nav-link">Locations</a>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#" class="nav-item active">HOME</a>
+                <div class="dropdown">
+                    <a href="#services" class="nav-item drop-trigger">SERVICES <i class="fa-solid fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#services">Roof Inspection</a>
+                        <a href="#services">Storm Damage Repair</a>
+                        <a href="#services">Replacement & Installation</a>
+                        <a href="#services">Commercial Flat Roofs</a>
+                    </div>
+                </div>
+                <a href="#gallery" class="nav-item">GALLERY</a>
+                <a href="#insurance" class="nav-item">INSURANCE</a>
+                <a href="#about" class="nav-item">ABOUT</a>
+                <a href="#contact" class="nav-item">CONTACT</a>
             </nav>
 
-            <div class="header-actions">
-                <a href="tel:2255277663" class="btn btn-secondary phone-btn">
-                    <span>Call Now</span>
+            <div class="header-right">
+                <a href="tel:2225277663" class="phone-link">
+                    <i class="fa-solid fa-phone"></i> (222) 527-7663
                 </a>
-                <a href="#estimate" class="btn btn-primary">Get Free Estimate</a>
-                <button class="mobile-nav-toggle" aria-label="Toggle navigation">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <a href="#estimate" class="btn-cta">
+                    <i class="fa-solid fa-calendar-days"></i> GET AN ESTIMATE
+                </a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+                    <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
         </div>
     </header>
 
-    <main>
-        <!-- Premium Hero Section -->
-        <section class="hero-section">
-            <div class="container hero-grid">
-                <div class="hero-content">
-                    <div class="badge">Customer Service • Quality • Integrity</div>
-                    <h1>Roofing, Roof Repair & Detailed Inspections</h1>
-                    <p class="hero-lead">Whether you have an urgent leak that needs immediate attention or need a comprehensive storm-damage roof replacement, our certified teams deliver unmatched workmanship with zero down financing options.</p>
-                    <div class="hero-actions">
-                        <a href="#estimate" class="btn btn-primary btn-large">Schedule Free Inspection</a>
-                        <a href="tel:2255277663" class="btn btn-outline btn-large">
-                            <span>Emergency Roof Repair</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="hero-visual">
-                    <!-- Placeholder representing clean fleet image asset from Screenshot_20260629-220521.png -->
-                    <div class="image-wrapper">
-                        <div class="ui-mock-badge">24/7 Response</div>
-                        <div class="fallback-hero-image">
-                            <span>[ Premium Fleet & Service Vehicle Showcase ]</span>
-                        </div>
-                    </div>
+    <!-- HERO SECTION -->
+    <section id="home" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="badge">ATLAS PRO+ DIAMOND STATUS</span>
+                <h1>Premium Roofing & Inspections.<br><span class="text-gold">Lifetime Protection.</span></h1>
+                <p>Local expertise with absolute customer dedication. Capitalize on zero-down financing options, standard warranty protections, and emergency storm restorations tailored to secure your home.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn-primary">LEARN MORE &rarr;</a>
+                    <a href="#services" class="btn-secondary">OUR SERVICES</a>
                 </div>
             </div>
-        </section>
 
-        <!-- Authority and Trust Ribbon -->
-        <section class="trust-ribbon">
-            <div class="container ribbon-flex">
-                <div class="ribbon-item"><strong>BBB</strong> A+ Accredited</div>
-                <div class="ribbon-item"><strong>Atlas Pro+</strong> Diamond Installer</div>
-                <div class="ribbon-item"><strong>CertainTeed</strong> ShingleMaster</div>
-                <div class="ribbon-item"><strong>LA Lic. #74136</strong> Fully Insured</div>
-            </div>
-        </section>
-
-        <!-- Core Services Section -->
-        <section id="services" class="services-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Comprehensive Roofing Expertise</h2>
-                    <p>No matter the size of your project, we handle it with specialized premium care.</p>
+            <div class="estimate-box" id="estimate">
+                <div class="estimate-header">
+                    <h3>INTERACTIVE ESTIMATE</h3>
+                    <p>Configure Matrix Parameters</p>
                 </div>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="card-icon">🏠</div>
-                        <h3>Residential Roofing</h3>
-                        <p>Complete roof replacements and premium architectural shingle configurations engineered to look stunning and withstand severe weather systems for decades.</p>
+                <div class="estimate-body">
+                    <div class="form-group">
+                        <label for="roofSize">Step 1: Project Footprint Size</label>
+                        <select id="roofSize" onchange="calculateEstimate()">
+                            <option value="1500">Compact Home (Up to 1,500 sq ft)</option>
+                            <option value="2500" selected>Standard Family Home (2,500 sq ft)</option>
+                            <option value="4000">Large Estate (4,000+ sq ft)</option>
+                        </select>
                     </div>
-                    <div class="service-card">
-                        <div class="card-icon">⚡</div>
-                        <h3>Emergency Leak Repair</h3>
-                        <p>Professional leak detection and rapid structural stabilization to halt water infiltration before expensive internal drywall damage occurs.</p>
+                    <div class="form-group">
+                        <label for="materialType">Step 2: Material Selection</label>
+                        <select id="materialType" onchange="calculateEstimate()">
+                            <option value="5" selected>Standard Architectural Shingles</option>
+                            <option value="8">Premium Atlas Pro+ Shingles</option>
+                            <option value="14">Standing Seam Metal Roofing</option>
+                        </select>
                     </div>
-                    <div class="service-card">
-                        <div class="card-icon">🔍</div>
-                        <h3>Detailed Inspections</h3>
-                        <p>Thorough physical forensic review including micro-shingle wear analysis, advanced flashing inspections, attic assessments, and structural gutter checks.</p>
+                    <div class="form-group">
+                        <label for="pitchType">Step 3: Slope & Complexity</label>
+                        <select id="pitchType" onchange="calculateEstimate()">
+                            <option value="1.0">Standard Walkable Pitch</option>
+                            <option value="1.25" selected>Steep Multi-Gable Slope</option>
+                        </select>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- High-Conversion Interactive Estimate Section -->
-        <section id="estimate" class="estimate-section">
-            <div class="container estimate-grid">
-                <div class="estimate-info">
-                    <h2>Get A Free, Professional Estimate</h2>
-                    <p>Delays can lead to profound structural complications and hidden mold growth. Book your detailed evaluation today—100% complimentary, completely zero-obligation.</p>
-                    <div class="features-list">
-                        <div class="feature-item">✓ Financing Options Available On Approved Credit</div>
-                        <div class="feature-item">✓ Master Certified Forensic Installers</div>
-                        <div class="feature-item">✓ Full Post-Job Impeccable Site Clean-up</div>
+                    <div class="price-display">
+                        <span class="price-label">Estimated Total:</span>
+                        <span class="price-amount" id="totalEstimate">$9,375</span>
                     </div>
-                </div>
-                <div class="estimate-form-wrapper">
-                    <form class="interactive-form">
-                        <div class="form-group">
-                            <label for="service-type">Required Service</label>
-                            <select id="service-type" required>
-                                <option value="" disabled selected>Select service pattern...</option>
-                                <option value="repair">Emergency Roof Repair</option>
-                                <option value="inspection">Detailed Roof Inspection</option>
-                                <option value="replacement">Full Roof Replacement</option>
-                                <option value="commercial">Commercial Services</option>
-                            </select>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="client-name">Full Name</label>
-                                <input type="text" id="client-name" placeholder="Your name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="client-phone">Phone Number</label>
-                                <input type="tel" id="client-phone" placeholder="(000) 000-0000" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="client-email">Email Address</label>
-                            <input type="email" id="client-email" placeholder="name@domain.com" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block">Submit Free Request</button>
-                    </form>
+                    <button class="btn-estimate-submit" onclick="alert('Estimate Saved! Our team will contact you to confirm pricing.')">LOCK IN THIS ESTIMATE</button>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <!-- Global Sticky Action Mobile Bar (Scroll-Triggered via JS) -->
-    <div class="sticky-action-bar">
-        <a href="tel:2255277663" class="action-btn call-action">
-            📞 Call Now (Same Day)
-        </a>
-        <a href="#estimate" class="action-btn book-action">
-            📅 Book Estimate
-        </a>
+    <!-- CERTIFICATIONS BAR -->
+    <div class="certifications-bar">
+        <div class="cert-container">
+            <h3>OUR TRUSTED PLATINUM PARTNERSHIPS</h3>
+            <div class="cert-logos">
+                <div class="cert-card"><i class="fa-solid fa-award"></i> <span>Atlas Pro+ Diamond</span></div>
+                <div class="cert-card"><i class="fa-solid fa-shield-halved"></i> <span>CertainTeed Select</span></div>
+                <div class="cert-card"><i class="fa-solid fa-building"></i> <span>NRCA Certified Member</span></div>
+                <div class="cert-card"><i class="fa-solid fa-check-double"></i> <span>Licensed & Bonded</span></div>
+            </div>
+        </div>
     </div>
 
-    <script src="app.js"></script>
-</body>
-</html>
+    <!-- SERVICES SECTION -->
+    <section id="services" class="services-section">
+        <div class="section-title-wrap">
+            <h2>Our Specialized Roofing Services</h2>
+            <div class="bar"></div>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                <h3>Roof Inspection</h3>
+                <p>Comprehensive drone and physical analysis pinpointing hairline fractures, structural wear, or hidden leaks before major overhead emergencies materialize.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-cloud-showers-heavy"></i></div>
+                <h3>Storm Damage Restoration</h3>
+                <p>Rapid deployment crew assisting with emergency tarping, hail damage mitigation, and full architectural restoration following extreme weather patterns.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-hammer"></i></div>
+                <h3>Replacement & Installation</h3>
+                <p>Complete strip-down and replacement utilizing precision multi-layered composite shingles featuring high wind and algae resilience protocols.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-layer-group"></i></div>
+                <h3>Commercial Flat Roofs</h3>
+                <p>State-of-the-art TPO, EPDM, and liquid silicone coatings structured to eliminate pooling water on expansive corporate facility envelopes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM SECTION -->
+    <section id="about" class="team-section">
+        <div class="team-container">
+            <div class="team-image-side" style="position: relative;">
+                <img src="roofing.jpg" alt="Lifetime Roofing Team" class="main-team-img">
+                <div class="image-floating-badge">
+                    <h4>Operations & Estimating HQ</h4>
+                </div>
+            </div>
+            <div class="team-text-side">
+                <span class="sub">MEET THE FIELD TEAM</span>
+                <h2>Real Local Professionals, Zero Subcontracting Guesswork</h2>
+                <p>Unlike transient storm-chaser groups, Lifetime Roofing operates out of fully transparent corporate offices. Here is our regional estimating team building architectural profiles and negotiating material pricing maps directly with manufacturers to pass the savings on to your family.</p>
+                <div class="metric-row">
+                    <div class="metric-item"><strong>15+</strong><span>Years Active</span></div>
+                    <div class="metric-item"><strong>12k+</strong><span>Roofs Installed</span></div>
+                    <div class="metric-item"><strong>100%</strong><span>In-House Labor</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INSURANCE CLAIMS SECTION -->
+    <section id="insurance" class="insurance-section">
+        <div class="section-title-wrap">
+            <h2>Hassle-Free Insurance Claims Matrix</h2>
+            <p>We work directly alongside all major adjustment firms to verify proper claim valuations.</p>
+        </div>
+        <div class="insurance-grid">
+            <div class="matrix-card">
+                <h3><i class="fa-solid fa-list-check"></i> Claims Matrix Checkpoints</h3>
+                <ul class="matrix-list">
+                    <li><i class="fa-solid fa-circle-check"></i> Documented Storm Evidence & Timelines</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Certified Structural Loss Reports</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Direct-to-Carrier Adjuster Meetings</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Zero Out-of-Pocket Financing Overages</li>
+                </ul>
+            </div>
+            <div class="guide-steps">
+                <div class="step-card">
+                    <div class="step-num">1</div>
+                    <h4>Free Drone Assessment</h4>
+                    <p>We create a high-definition structural map showcasing actual physical impact evidence.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">2</div>
+                    <h4>File Submission</h4>
+                    <p>Your claims representative submits precise Xactimate code estimates to eliminate carrier delays.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">3</div>
+                    <h4>Full Restoration</h4>
+                    <p>Once approved, your premium upgrade shingles are deployed within 48 business hours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECT GALLERY SECTION (FIXED: Separate unique image inputs linked below) -->
+    <section id="gallery" class="gallery-section">
+        <div class="section-title-wrap">
+            <h2>Completed Premium Masterpieces</h2>
+            <div class="bar"></div>
+        </div>
+        <div class="gallery-tabs">
+            <button class="gallery-tab-btn active" onclick="filterGallery('all')">All Work</button>
+            <button class="gallery-tab-btn" onclick="filterGallery('residential')">Residential</button>
+            <button class="gallery-tab-btn" onclick="filterGallery('commercial')">Commercial</button>
+        </div>
+        <div class="gallery-grid">
+            <!-- Card 1: Residential Unique Image -->
+            <div class="gallery-item residential">
+                <div class="gallery-img-wrapper">
+                    <img src="residential_roof_1.png" alt="Residential Architectural Shingles">
+                </div>
+                <div class="gallery-overlay">
+                    <h4>Multi-Gable Shingle Install</h4>
+                    <p>Baton Rouge, LA</p>
+                </div>
+            </div>
+            <!-- Card 2: Residential Unique Image -->
+            <div class="gallery-item residential">
+                <div class="gallery-img-wrapper">
+                    <img src="residential_roof_2.png" alt="Premium Slate Shingle Upgrade">
+                </div>
+                <div class="gallery-overlay">
+                    <h4>Architectural Shingle Upgrade</h4>
+                    <p>Slidell, LA</p>
+                </div>
+            </div>
+            <!-- Card 3: Commercial Unique Image -->
+            <div class="gallery-item commercial">
+                <div class="gallery-img-wrapper">
+                    <img src="commercial_roof_1.png" alt="High-Grade TPO Flat Commercial System">
+                </div>
+                <div class="gallery-overlay">
+                    <h4>High-Grade TPO Flat System</h4>
+                    <p>Spring, TX</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DYNAMIC PAGINATED REVIEWS SECTION -->
+    <section id="reviews" class="reviews-section">
+        <div class="section-title-wrap">
+            <h2>Verified Customer Testimony</h2>
+            <p>See why property owners rank us a flawless 5.0 stars for construction execution.</p>
+        </div>
+        
+        <div class="reviews-container">
+            <div class="review-page active" id="reviewPage1">
+                <div class="review-card">
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p>"The Atlas Pro+ shingles transformed the look of our estate. The field crew completed the tear-off and replacement in a single daytime shift!"</p>
+                    <div class="reviewer">- Marcus G., Baton Rouge</div>
+                </div>
+                <div class="review-card">
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p>"Dealing with insurance adjusters was an absolute nightmare until Lifetime stepped in. They handled the entire claim pipeline flawlessly."</p>
+                    <div class="reviewer">- Sarah L., Slidell</div>
+                </div>
+            </div>
+
+            <div class="review-page" id="reviewPage2">
+                <div class="review-card">
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p>"Superb communication across the board! They even utilized deep magnet sweeps to guarantee no roofing nails remained on our lawn."</p>
+                    <div class="reviewer">- David K., Spring</div>
+                </div>
+                <div class="review-card">
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p>"Extremely precise estimates. The dynamic field price matched our quote exactly without arbitrary markup surprises at completion."</p>
+                    <div class="reviewer">- Elena R., Houston</div>
+                </div>
+            </div>
+
+            <div class="review-page" id="reviewPage3">
+                <div class="review-card">
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p>"Excellent professional commercial service on our storefront. Highly recommended for complex low-slope roof repair applications."</p>
+                    <div class="reviewer">- Robert H., Baton Rouge</div>
+                </div>
+                <div class="review-card">
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p>"Prompt, local, and incredibly polite. They answered every line item specification down to the flashing detailing."</p>
+                    <div class="reviewer">- Jessica M., Slidell</div>
+                </div>
+            </div>
+
+            <div class="review-page" id="reviewPage4">
+                <div class="review-card">
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p>"Their zero-down structural financing option was the primary reason we were able to fix our storm damage safely this season!"</p>
+                    <div class="reviewer">- Tuan N., Spring</div>
+                </div>
+                <div class="review-card">
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p>"Highest grade materials available. Do not waste time with generic bids�hire Lifetime and secure your home permanently."</p>
+                    <div class="reviewer">- Brandon W., Houston</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="reviews-pagination">
+            <button class="page-btn active" onclick="changeReviewPage(1)">1</button>
+            <button class="page-btn" onclick="changeReviewPage(2)">2</button>
+            <button class="page-btn" onclick="changeReviewPage(3)">3</button>
+            <button class="page-btn" onclick="changeReviewPage(4)">4</button>
+        </div>
+    </sect
