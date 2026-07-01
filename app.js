@@ -1,42 +1,37 @@
-document.addEventListener('DOMContentLoaded', () => {
-    
-    // UI Spacing Adjuster Rule on Navigation Scroll
-    const header = document.querySelector('.main-header');
-    
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.style.padding = '8px 0';
-            header.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.05)';
+// app.js
+
+// 1. Function for the Estimate Calculator
+function calculateEstimate() {
+    const size = parseFloat(document.getElementById('roofSize').value);
+    const material = parseFloat(document.getElementById('materialType').value);
+    const pitch = parseFloat(document.getElementById('pitchType').value);
+    // Your calculation logic here (e.g., total = size * material * pitch)
+    const total = (size * material * pitch).toFixed(2); // Example formula
+    document.getElementById('totalEstimate').textContent = `$${total}`;
+}
+
+// 2. Function for Gallery Filtering
+function filterGallery(category) {
+    const items = document.querySelectorAll('.gallery-item');
+    items.forEach(item => {
+        if (category === 'all' || item.classList.contains(category)) {
+            item.style.display = 'block';
         } else {
-            header.style.padding = '16px 0';
-            header.style.boxShadow = 'none';
+            item.style.display = 'none';
         }
     });
+    // Update active button state
+    document.querySelectorAll('.gallery-tab-btn').forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+}
 
-    // Mobile Navigation Drawer Hook
-    const navToggle = document.querySelector('.mobile-nav-toggle');
-    const desktopNav = document.querySelector('.desktop-nav');
-
-    navToggle.addEventListener('click', () => {
-        desktopNav.classList.toggle('active');
-        // Simple structural switch logic for hamburger visual lines
-        navToggle.classList.toggle('open');
-    });
-
-    // Lead Intake Data Interceptor Validation Pattern
-    const form = document.querySelector('.interactive-form');
-    
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        // Input Selection Extraction Matrix
-        const service = document.getElementById('service-type').value;
-        const name = document.getElementById('client-name').value;
-        const phone = document.getElementById('client-phone').value;
-        const email = document.getElementById('client-email').value;
-
-        // Visual UX Validation State confirmation framework 
-        alert(`Success! Lead safely captured.\nName: ${name}\nRequested: ${service}\nOur operations dispatcher will call you within 15 minutes.`);
-        form.reset();
-    });
-});
+// 3. Function for Review Pagination
+function changeReviewPage(pageNumber) {
+    // Hide all review pages
+    document.querySelectorAll('.review-page').forEach(page => page.classList.remove('active'));
+    // Show the selected page
+    document.getElementById(`reviewPage${pageNumber}`).classList.add('active');
+    // Update active button state
+    document.querySelectorAll('.page-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.page-btn')[pageNumber - 1].classList.add('active');
+}
